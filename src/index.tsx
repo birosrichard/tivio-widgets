@@ -29,8 +29,6 @@ const router = createBrowserRouter([
 root.render(
   <TivioProvider conf={{
     secret: 'pdvtvM4PCofoVav0AHGe',
-    //@ts-ignore
-    bundleUrlOverride: 'http://localhost:3000/core-react-dom-bundle/index.js',
     language: LangCode.CS,
     currency: 'CZK'
   }}>
