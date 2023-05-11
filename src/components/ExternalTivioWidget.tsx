@@ -12,7 +12,7 @@ export const ExternalTivioWidget = () => {
     >
       <div className='p-8 md:p-16 xl:p-32'>
         <div>
-          <TivioWidget id='WSGZzJJqQ2gTCRmT7wMU' ref={widgetRef} navigateFunction={navigate} />
+          <TivioWidget id='um7C2FdGfNonhHC7pHSz' ref={widgetRef} navigateFunction={navigate} />
         </div>
       </div>
     </main>

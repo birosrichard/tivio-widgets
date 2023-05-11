@@ -28,7 +28,7 @@ const router = createBrowserRouter([
 
 root.render(
   <TivioProvider conf={{
-    secret: 'pdvtvM4PCofoVav0AHGe',
+    secret: 'ZuUF7JGu8Poqy7E8k5fx',
     language: LangCode.CS,
     currency: 'CZK'
   }}>
