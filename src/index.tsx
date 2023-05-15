@@ -9,6 +9,7 @@ import {
 } from "react-router-dom"
 import Root from './routes/Root'
 import Tivio from './routes/Tivio'
+import { ErrorScreen } from './components/ErrorScreen'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <div><h1>Error occured</h1></div>,
+    errorElement: <ErrorScreen />,
   },
   {
     path: '/tivio/*',
@@ -30,7 +31,9 @@ root.render(
   <TivioProvider conf={{
     secret: 'ZuUF7JGu8Poqy7E8k5fx',
     language: LangCode.CS,
-    currency: 'CZK'
+    currency: 'CZK',
+    // @ts-ignore
+    bundleUrlOverride: 'http://localhost:3000/core-react-dom-bundle/index.js',
   }}>
     <RouterProvider router={router} />
   </TivioProvider>

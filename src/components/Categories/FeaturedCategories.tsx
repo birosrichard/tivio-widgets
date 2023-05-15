@@ -21,7 +21,7 @@ const categories = [
 
 const FeaturedCategories = () => {
   return (
-    <section className="bg-black py-10">
+    <section className="bg-background py-10">
       <div className="mx-8 md:mx-16 xl:mx-32 mb-8 md:mb-16 xl:mb-24">
         <h2 className="text-white text-4xl font-bold mb-8">Featured Categories</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -36,7 +36,7 @@ const FeaturedCategories = () => {
                   background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)',
                 }}
               />
-              <div className="absolute inset-0 flex items-center justify-center text-white font-semibold text-2xl bg-black bg-opacity-50 transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+              <div className="absolute inset-0 flex items-center justify-center text-white font-semibold text-2xl bg-background bg-opacity-50 transition-opacity duration-200 opacity-0 group-hover:opacity-100">
                 {category.title}
               </div>
             </div>

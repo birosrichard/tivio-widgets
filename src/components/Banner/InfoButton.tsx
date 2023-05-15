@@ -1,17 +1,13 @@
-import {MdInfoOutline, MdPlaylistAdd} from 'react-icons/md';
-import React from 'react';
-
 interface Props {
-    handleInfoButtonClick: () => void;
+    handleInfoButtonClick: () => void
 }
-export const InfoButton = ({handleInfoButtonClick}: Props) => {
+export const InfoButton = ({ handleInfoButtonClick }: Props) => {
     return (
         <button
             onClick={handleInfoButtonClick}
-            className="bg-gray-700 text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50 inline-flex items-center"
+            className="button-base-styles px-4 bg-secondary text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50"
         >
-            <MdInfoOutline size="1.5rem" className="mr-2" />
-            <span className="font-semibold text-lg">Info</span>
+            <span className="font-semibold text-lg uppercase">Další info</span>
         </button>
     )
 }

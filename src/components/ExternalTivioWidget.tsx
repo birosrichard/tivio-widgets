@@ -1,6 +1,6 @@
 import { TivioWidget } from '@tivio/sdk-react'
 import { useRef } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 export const ExternalTivioWidget = () => {
   const widgetRef = useRef(null)
@@ -8,11 +8,11 @@ export const ExternalTivioWidget = () => {
 
   return (
     <main
-      className='w-full bg-[#434343]'
+      className='w-full bg-background'
     >
-      <div className='p-8 md:p-16 xl:p-32'>
+      <div className='pl-32 mt-24'>
         <div>
-          <TivioWidget id='um7C2FdGfNonhHC7pHSz' ref={widgetRef} navigateFunction={navigate} />
+          <TivioWidget id='lJyCuFwzxci0n3ggKBXV' ref={widgetRef} navigateFunction={navigate} />
         </div>
       </div>
     </main>

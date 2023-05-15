@@ -2767,10 +2767,10 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@tivio/common@1.1.104":
-  version "1.1.104"
-  resolved "https://registry.yarnpkg.com/@tivio/common/-/common-1.1.104.tgz#ac8c7f6b046109512b235be446e421c901b1505b"
-  integrity sha512-lu9wiFWOKXHY/G48amiwgZUd/W7n0UdCZslDozFQLYWa9QTMj12EyVSDBf3MLmLN3zIxHhMCP+1f0LOiqcQtpw==
+"@tivio/common@1.1.107":
+  version "1.1.107"
+  resolved "https://registry.yarnpkg.com/@tivio/common/-/common-1.1.107.tgz#71ae53c77467e0239db17ea67702aa46dc93b57b"
+  integrity sha512-7PyARqjOZpbL9MgwuJDjDXHMVYg4+QZF4980IFJ+4t3g44JzuRQTQ9/NGYxC2ICpaeb7llRAG8YpjCPf42SM3w==
   dependencies:
     "@types/lodash.isempty" "^4.4.6"
     dayjs "^1.11.0"
@@ -2779,15 +2779,15 @@
     lodash.isempty "^4.4.0"
     mobx "^6.0.5"
 
-"@tivio/sdk-react@*":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@tivio/sdk-react/-/sdk-react-5.0.2.tgz#aa1294b125f5ab9afbfec5a2ef464be1e8bd6e31"
-  integrity sha512-LweAWUD/LkpnM6MwlNFwDw1tCinqNVaYlH1SXHgW1k9V97rzBEuO8P4U28aYaHJAa4PUaN97UDUNYgMdXSSDpg==
+"@tivio/sdk-react@5.0.3-alpha-3":
+  version "5.0.3-alpha-3"
+  resolved "https://registry.yarnpkg.com/@tivio/sdk-react/-/sdk-react-5.0.3-alpha-3.tgz#dba97446b8137fe6617342c9c1bd866974658299"
+  integrity sha512-YYZ2BMzI1etT2szHWUnCTbWeQ8Dzwj2p5XVjv8BUj38oj943HFF52uMrPdzrYGub8UX7Ipyzpfk5y7uXnDKx/A==
   dependencies:
     "@material-ui/core" "^4.11.2"
     "@material-ui/icons" "^4.11.2"
     "@sentry/browser" "^6.1.0"
-    "@tivio/common" "1.1.104"
+    "@tivio/common" "1.1.107"
     dayjs "^1.11.0"
     es7-object-polyfill "^1.0.1"
     firebase "8.10.1"
@@ -8062,6 +8062,13 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lrud@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/lrud/-/lrud-8.0.0.tgz#cdca70de75948413e42f3a60e91fa8b229dfab31"
+  integrity sha512-8A5J3i1MsQ2dy55U3ubj8r626RcjkSaozx21OVc3xGY4j+K9Ojp7axNbjRhzZwDslTNwAmTn+4ajfdzc73LRGQ==
+  dependencies:
+    mitt "^1.2.0"
+
 lz-string@^1.4.4:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
@@ -8225,6 +8232,11 @@ minimist@^1.1.0, minimist@^1.2.0, minimist@^1.2.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
+
+mitt@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mitt/-/mitt-1.2.0.tgz#cb24e6569c806e31bd4e3995787fe38a04fdf90d"
+  integrity sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==
 
 mkdirp-classic@^0.5.2:
   version "0.5.3"
