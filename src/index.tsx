@@ -28,13 +28,15 @@ const router = createBrowserRouter([
 ])
 
 root.render(
-  <TivioProvider conf={{
-    secret: 'ZuUF7JGu8Poqy7E8k5fx',
-    language: LangCode.CS,
-    currency: 'CZK',
-  }}>
-    <RouterProvider router={router} />
-  </TivioProvider>
+  <>
+    <TivioProvider conf={{
+      secret: 'ZuUF7JGu8Poqy7E8k5fx',
+      language: LangCode.CS,
+      currency: 'CZK'
+    }}>
+      <RouterProvider router={router} />
+    </TivioProvider>
+  </>
 )
 
 // If you want to start measuring performance in your app, pass a function

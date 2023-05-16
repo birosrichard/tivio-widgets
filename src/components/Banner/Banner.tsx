@@ -1,8 +1,5 @@
-import React from 'react'
 import PlayButton from './PlayButton'
-import { MdPlaylistAdd, MdInfoOutline } from 'react-icons/md'
 import { InfoButton } from './InfoButton'
-import { RecentChannels } from '../RecentChannels/RecentChannels'
 
 export const Banner = () => {
     console.log('debug:Banner')

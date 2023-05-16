@@ -37,7 +37,7 @@ const TV_CHANNELS = [{
 export const RecentChannels = () => {
 	return (
 		<div className='w-full pl-32 -mt-64'>
-			<h2 className='text-4xl text-white mb-5'>Recent Channels</h2>
+			<h2 className='text-4xl text-white mb-5 z-50 relative'>Recent Channels</h2>
 			<div className='flex items-center w-full overflow-x-auto overflow-y-hidden scrollbar-hide'>
 				<div className='flex whitespace-nowrap space-x-8'>
 					{
