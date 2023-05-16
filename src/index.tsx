@@ -32,7 +32,9 @@ root.render(
     <TivioProvider conf={{
       secret: 'ZuUF7JGu8Poqy7E8k5fx',
       language: LangCode.CS,
-      currency: 'CZK'
+      currency: 'CZK',
+      // @ts-ignore
+      bundleUrlOverride: 'http://localhost:3000/core-react-dom-bundle/index.js',
     }}>
       <RouterProvider router={router} />
     </TivioProvider>
