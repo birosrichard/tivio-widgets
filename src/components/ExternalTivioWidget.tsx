@@ -15,7 +15,7 @@ export const ExternalTivioWidget = () => {
     >
       <div className='pl-32 mt-24'>
         <div>
-          <TivioWidget id='lJyCuFwzxci0n3ggKBXV' ref={widgetRef} navigateFunction={navigate} onEnabled={() => setLoaded(true)} />
+          <TivioWidget id='jojWidget2' ref={widgetRef} navigateFunction={navigate} onEnabled={() => setLoaded(true)} />
         </div>
         {
           !loaded && (
