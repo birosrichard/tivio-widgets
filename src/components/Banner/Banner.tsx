@@ -1,9 +1,7 @@
 import PlayButton from './PlayButton'
 import { InfoButton } from './InfoButton'
-import { RecentChannels } from '../RecentChannels/RecentChannels'
-import { FocusNode, FocusRoot } from '@please/lrud'
 
-export const Banner = () => {
+export const Banner= () => {
     console.log('debug:Banner')
 
     const movieDescription =

@@ -27,7 +27,23 @@ const MOVIES = [{
 }, {
 	title: 'Top Gun',
 	imageUrl: '/images/movies/top-gun.webp',
+}, {
+	title: 'Star Wars: New Hope',
+	imageUrl: '/images/movies/new-hope.webp',
+}, {
+	title: 'Avatar',
+	imageUrl: '/images/movies/avatar.webp',
+}, {
+	title: 'The Godfather',
+	imageUrl: '/images/movies/godfather.jpg',
+}, {
+	title: 'Pulp Fiction',
+	imageUrl: '/images/movies/pulp.webp',
+}, {
+	title: 'Top Gun',
+	imageUrl: '/images/movies/top-gun.webp',
 }]
+
 
 export const Movies = () => {
 	return (
