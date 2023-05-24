@@ -1,5 +1,7 @@
 import PlayButton from './PlayButton'
 import { InfoButton } from './InfoButton'
+import { RecentChannels } from '../RecentChannels/RecentChannels'
+import { FocusNode, FocusRoot } from '@please/lrud'
 
 export const Banner = () => {
     console.log('debug:Banner')
@@ -37,7 +39,6 @@ export const Banner = () => {
                     <PlayButton onClick={handlePlayButtonClick} />
                     <InfoButton handleInfoButtonClick={handleInfoButtonClick} />
                 </div>
-                {/* <RecentChannels /> */}
             </div>
         </div>
     )

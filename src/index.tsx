@@ -10,6 +10,8 @@ import {
 import Root from './routes/Root'
 import Tivio from './routes/Tivio'
 import { ErrorScreen } from './components/ErrorScreen'
+import 'modern-normalize/modern-normalize.css';
+import { FocusRoot } from '@please/lrud'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -28,17 +30,15 @@ const router = createBrowserRouter([
 ])
 
 root.render(
-  <>
-    <TivioProvider conf={{
-      secret: 'ZuUF7JGu8Poqy7E8k5fx',
-      language: LangCode.CS,
-      currency: 'CZK',
-      // @ts-ignore
-      bundleUrlOverride: 'http://localhost:3000/core-react-dom-bundle/index.js',
-    }}>
+  <TivioProvider conf={{
+    secret: 'ZuUF7JGu8Poqy7E8k5fx',
+    language: LangCode.CS,
+    currency: 'CZK',
+  }}>
+    <FocusRoot>
       <RouterProvider router={router} />
-    </TivioProvider>
-  </>
+    </FocusRoot>
+  </TivioProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function

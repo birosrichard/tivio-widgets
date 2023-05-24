@@ -1,3 +1,4 @@
+import { FocusNode } from '@please/lrud'
 import { ChannelTile } from './ChannelTile'
 
 const TV_CHANNELS = [{
@@ -28,10 +29,6 @@ const TV_CHANNELS = [{
 	id: 7,
 	name: 'UPN News',
 	logo: '/images/channels/upn.png'
-}, {
-	id: 8,
-	name: 'Den kdy se zastavila Země',
-	logo: '/images/channels/mtv.png'
 }]
 
 export const RecentChannels = () => {
@@ -43,7 +40,9 @@ export const RecentChannels = () => {
 					{
 						TV_CHANNELS.map((channel, index) => {
 							return (
-								<ChannelTile key={index} title={channel.name} imageUrl={channel.logo} />
+								<FocusNode key={index} focusedClass='channel-focused' className='text-white'>
+									<ChannelTile title={channel.name} imageUrl={channel.logo} />
+								</FocusNode>
 							)
 						})
 					}
