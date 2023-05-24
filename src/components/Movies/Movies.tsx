@@ -1,4 +1,6 @@
+import { FocusNode } from '@please/lrud'
 import { VideoTile } from '../VideoTile'
+import { motion } from 'framer-motion'
 
 const MOVIES = [{
 	title: 'Pirates of the Caribbean',
@@ -44,13 +46,27 @@ const MOVIES = [{
 	imageUrl: '/images/movies/top-gun.webp',
 }]
 
+const ROW_WIDTH = 289
 
-export const Movies = () => {
+
+export const Movies = ({ gridPosition }: any) => {
+	console.log('debug:gridPosition', gridPosition)
+	console.log('debug:x', -ROW_WIDTH * gridPosition.columnIndex)
 	return (
-		<div className='w-full pl-32 '>
+		<div className='w-full pl-32'
+		>
 			<h2 className='text-4xl text-white mb-5'>Movies</h2>
 			<div className='flex items-center w-full overflow-x-auto overflow-y-hidden scrollbar-hide'>
-				<div className='flex whitespace-nowrap space-x-[43px]'>
+				<motion.div className='flex whitespace-nowrap space-x-[43px]'
+					animate={{
+						scale: 1,
+						opacity: 1,
+						x: (-ROW_WIDTH * gridPosition.columnIndex) > -800 ? 0 : (-ROW_WIDTH * gridPosition.columnIndex) + 800,
+					}}
+					transition={{
+						duration: 0.25,
+						ease: 'easeOut',
+					}}>
 					{
 						MOVIES.map((movie, index) => {
 							return (
@@ -58,7 +74,7 @@ export const Movies = () => {
 							)
 						})
 					}
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	)

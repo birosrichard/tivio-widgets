@@ -1,19 +1,18 @@
 import { TivioWidget } from '@tivio/sdk-react'
 import { useRef, useState } from 'react'
 import { useNavigate } from "react-router-dom"
-import {useFocusNodeById} from '@please/lrud'
+import { FocusNode, useFocusNodeById } from '@please/lrud'
 
 export const ExternalTivioWidget = () => {
   const widgetRef = useRef(null)
   const navigate = useNavigate()
   const [loaded, setLoaded] = useState(false)
 
-  console.log('my_app:widget')
-  const navFocusNode = useFocusNodeById('widget');
-
+  const navFocusNode = useFocusNodeById('widget')
   console.log('debug:isWidgetFocues:', navFocusNode?.isFocused)
+
   return (
-    <main
+    <FocusNode
       className='w-full bg-background'
     >
       <div className='pl-32 mt-24'>
@@ -42,6 +41,6 @@ export const ExternalTivioWidget = () => {
           )
         }
       </div>
-    </main>
+    </FocusNode>
   )
 }

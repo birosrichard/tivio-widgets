@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FocusNode, useSetFocus } from '@please/lrud'
+import { FocusNode, useFocusNodeById, useSetFocus } from '@please/lrud'
 import { Banner } from '../components/Banner/Banner'
 import { ExternalTivioWidget } from '../components/ExternalTivioWidget'
 import { Movies } from '../components/Movies/Movies'
@@ -7,11 +7,11 @@ import { RecentChannels } from '../components/RecentChannels/RecentChannels'
 import { RootLayout } from '../components/RootLayout'
 import { motion } from 'framer-motion'
 
-const COMPONENTS = [
-  { name: 'Banner', component: Banner },
-  { name: 'RecentChannels', component: RecentChannels },
-  { name: 'ExternalTivioWidget', component: ExternalTivioWidget },
-  { name: 'Movies', component: Movies },
+const COMPONENTS: { name: string, component: React.ComponentType<any>, focusId: string }[] = [
+  { name: 'Banner', component: Banner, focusId: 'banner' },
+  { name: 'RecentChannels', component: RecentChannels, focusId: 'recent-channels' },
+  { name: 'ExternalTivioWidget', component: ExternalTivioWidget, focusId: 'widget' },
+  { name: 'Movies', component: Movies, focusId: 'movies' },
 ]
 
 export default function Root() {
@@ -22,12 +22,13 @@ export default function Root() {
   const setFocus = useSetFocus()
   const ROW_HEIGHT = 280
 
+  const navFocusNode = useFocusNodeById('widget')
+  console.log('debug:isWidgetFocused:', navFocusNode?.isFocused)
+
   return (
     <RootLayout>
       <FocusNode
         focusedClass=''
-        orientation='vertical'
-        className="home page"
         isGrid
         focusId="home"
         defaultFocusColumn={gridPosition.columnIndex}
@@ -39,6 +40,7 @@ export default function Root() {
           }
         }}
         onGridMove={(e) => {
+          console.log('debug:e', e)
           setGridPosition({
             rowIndex: e.nextRowIndex,
             columnIndex: e.nextColumnIndex,
@@ -66,17 +68,50 @@ export default function Root() {
         }}>
         {COMPONENTS.map((componentObj, rowIndex) => {
           const Component = componentObj.component
-          return (
-            <FocusNode
-              key={rowIndex}
-              focusedClass=''>
-              <Component
-                key={rowIndex}
-                // rowIndex={rowIndex}
-                // gridPosition={gridPosition}
-                />
-            </FocusNode>
-          )
+          switch (componentObj.name) {
+            case 'Banner':
+              return (
+                <FocusNode
+                  key={rowIndex}
+                  focusId={componentObj.focusId}
+                  focusedClass=''
+                >
+                  <Component key={rowIndex} />
+                </FocusNode>
+              )
+            case 'RecentChannels':
+              return (
+                <FocusNode
+                  key={rowIndex}
+                  focusId={componentObj.focusId}
+                  focusedClass=''
+                >
+                  <Component key={rowIndex} />
+                </FocusNode>
+              )
+            case 'ExternalTivioWidget':
+              return (
+                <FocusNode
+                  key={rowIndex}
+                  focusId={componentObj.focusId}
+                  focusedClass=''
+                >
+                  <Component key={rowIndex} />
+                </FocusNode>
+              )
+            case 'Movies':
+              return (
+                <FocusNode
+                  key={rowIndex}
+                  focusId={componentObj.focusId}
+                  focusedClass=''
+                >
+                  <Component key={rowIndex} gridPosition={gridPosition} />
+                </FocusNode>
+              )
+            default:
+              return null
+          }
         })}
       </FocusNode>
     </RootLayout>
