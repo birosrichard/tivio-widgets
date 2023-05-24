@@ -1,4 +1,3 @@
-import { FocusNode } from '@please/lrud'
 import { VideoTile } from '../VideoTile'
 import { motion } from 'framer-motion'
 
@@ -46,12 +45,11 @@ const MOVIES = [{
 	imageUrl: '/images/movies/top-gun.webp',
 }]
 
-const ROW_WIDTH = 289
+const ITEM_WIDTH = 289
 
 
 export const Movies = ({ gridPosition }: any) => {
-	console.log('debug:gridPosition', gridPosition)
-	console.log('debug:x', -ROW_WIDTH * gridPosition.columnIndex)
+
 	return (
 		<div className='w-full pl-32'
 		>
@@ -61,7 +59,7 @@ export const Movies = ({ gridPosition }: any) => {
 					animate={{
 						scale: 1,
 						opacity: 1,
-						x: (-ROW_WIDTH * gridPosition.columnIndex) > -800 ? 0 : (-ROW_WIDTH * gridPosition.columnIndex) + 800,
+						x: (-ITEM_WIDTH * gridPosition.columnIndex) > -800 ? 0 : (-ITEM_WIDTH * gridPosition.columnIndex) + 800,
 					}}
 					transition={{
 						duration: 0.25,

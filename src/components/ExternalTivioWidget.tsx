@@ -9,7 +9,6 @@ export const ExternalTivioWidget = () => {
   const [loaded, setLoaded] = useState(false)
 
   const navFocusNode = useFocusNodeById('widget')
-  console.log('debug:isWidgetFocues:', navFocusNode?.isFocused)
 
   return (
     <FocusNode

@@ -2,7 +2,6 @@ import PlayButton from './PlayButton'
 import { InfoButton } from './InfoButton'
 
 export const Banner= () => {
-    console.log('debug:Banner')
 
     const movieDescription =
         "Na stříbrné plátno přichází jeden z nejpodmanivějších a nerozporuplnějších hrdinů filmového světa značky Marvel"

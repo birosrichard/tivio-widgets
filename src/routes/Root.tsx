@@ -23,7 +23,6 @@ export default function Root() {
   const ROW_HEIGHT = 280
 
   const navFocusNode = useFocusNodeById('widget')
-  console.log('debug:isWidgetFocused:', navFocusNode?.isFocused)
 
   return (
     <RootLayout>
@@ -40,7 +39,6 @@ export default function Root() {
           }
         }}
         onGridMove={(e) => {
-          console.log('debug:e', e)
           setGridPosition({
             rowIndex: e.nextRowIndex,
             columnIndex: e.nextColumnIndex,
