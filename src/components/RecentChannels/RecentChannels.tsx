@@ -4,31 +4,31 @@ import { ChannelTile } from './ChannelTile'
 const TV_CHANNELS = [{
 	id: 1,
 	name: 'Star Dance',
-	logo: '/images/channels/rtl.png'
+	logo: '/images/channels/rtl.webp'
 }, {
 	id: 2,
 	name: 'Televizní noviny',
-	logo: '/images/channels/mtv.png'
+	logo: '/images/channels/mtv.webp'
 }, {
 	id: 3,
 	name: 'Sicario',
-	logo: '/images/channels/nbc.png'
+	logo: '/images/channels/nbc.jpg'
 }, {
 	id: 4,
 	name: 'Simpsonovi XVII',
-	logo: '/images/channels/star.png'
+	logo: '/images/channels/star.webp'
 }, {
 	id: 5,
 	name: 'Počasí',
-	logo: '/images/channels/svt.png'
+	logo: '/images/channels/svt.webp'
 }, {
 	id: 6,
 	name: 'Matrix',
-	logo: '/images/channels/fox.png'
+	logo: '/images/channels/fox.webp'
 }, {
 	id: 7,
 	name: 'UPN News',
-	logo: '/images/channels/upn.png'
+	logo: '/images/channels/upn.webp'
 }]
 
 export const RecentChannels = () => {
