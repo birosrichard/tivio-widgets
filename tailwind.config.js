@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         background: '#000',
         secondary: '#253843'
+      },
+      screens: {
+        'xl': '1300px',
       }
     },
   },

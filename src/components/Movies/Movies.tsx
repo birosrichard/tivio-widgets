@@ -28,38 +28,23 @@ const MOVIES = [{
 }, {
 	title: 'Top Gun',
 	imageUrl: '/images/movies/top-gun.webp',
-}, {
-	title: 'Star Wars: New Hope',
-	imageUrl: '/images/movies/new-hope.webp',
-}, {
-	title: 'Avatar',
-	imageUrl: '/images/movies/avatar.webp',
-}, {
-	title: 'The Godfather',
-	imageUrl: '/images/movies/godfather.jpg',
-}, {
-	title: 'Pulp Fiction',
-	imageUrl: '/images/movies/pulp.webp',
-}, {
-	title: 'Top Gun',
-	imageUrl: '/images/movies/top-gun.webp',
 }]
 
-const ITEM_WIDTH = 289
+const ITEM_WIDTH = window?.screen?.width > 1300 ? 291 : 317
 
 
-export const Movies = ({ gridPosition }: any) => {
+export const Movies = ({ gridPosition, rowIndex }: any) => {
 
 	return (
 		<div className='w-full pl-32'
 		>
-			<h2 className='text-4xl text-white mb-5'>Movies</h2>
+			<h2 className='text-4xl text-white mb-5'>Filmy</h2>
 			<div className='flex items-center w-full overflow-x-auto overflow-y-hidden scrollbar-hide'>
-				<motion.div className='flex whitespace-nowrap space-x-[43px]'
+				<motion.div className='flex whitespace-nowrap space-x-[45px]'
 					animate={{
 						scale: 1,
 						opacity: 1,
-						x: (-ITEM_WIDTH * gridPosition.columnIndex) > -800 ? 0 : (-ITEM_WIDTH * gridPosition.columnIndex) + 800,
+						x: ((gridPosition.columnIndex && gridPosition.rowIndex === rowIndex) && (-ITEM_WIDTH * gridPosition.columnIndex)) > -900 ? 0 : (-ITEM_WIDTH * gridPosition.columnIndex) + 900,
 					}}
 					transition={{
 						duration: 0.25,

@@ -1,5 +1,6 @@
 import { FocusNode } from '@please/lrud'
 import { ChannelTile } from './ChannelTile'
+import { motion } from 'framer-motion'
 
 const TV_CHANNELS = [{
 	id: 1,
@@ -31,12 +32,24 @@ const TV_CHANNELS = [{
 	logo: '/images/channels/upn.webp'
 }]
 
-export const RecentChannels = () => {
+const ITEM_WIDTH = 192
+
+export const RecentChannels = ({ gridPosition, rowIndex }: any) => {
 	return (
-		<div className='w-full pl-32 -mt-64'>
-			<h2 className='text-4xl text-white mb-5 z-50 relative'>Recent Channels</h2>
+		<div className='w-full pl-32 -mt-44 xl:-mt-64'>
+			<h2 className='text-4xl mb-5 z-50 relative text-white'>Televizní Kanály</h2>
 			<div className='flex items-center w-full overflow-x-auto overflow-y-hidden scrollbar-hide'>
-				<div className='flex whitespace-nowrap space-x-8'>
+			<motion.div className='flex whitespace-nowrap space-x-[43px]'
+					animate={{
+						scale: 1,
+						opacity: 1,
+						x: ((gridPosition.columnIndex && gridPosition.rowIndex === rowIndex) && (-ITEM_WIDTH * gridPosition.columnIndex)) > -800 ? 0 : (-ITEM_WIDTH * gridPosition.columnIndex) + 800,
+					}}
+					transition={{
+						duration: 0.25,
+						ease: 'easeOut',
+					}}>
+
 					{
 						TV_CHANNELS.map((channel, index) => {
 							return (
@@ -46,7 +59,7 @@ export const RecentChannels = () => {
 							)
 						})
 					}
-				</div>
+					</motion.div>
 			</div>
 		</div>
 	)

@@ -10,8 +10,9 @@ import {
 import Root from './routes/Root'
 import Tivio from './routes/Tivio'
 import { ErrorScreen } from './components/ErrorScreen'
-import 'modern-normalize/modern-normalize.css';
+import 'modern-normalize/modern-normalize.css'
 import { FocusRoot } from '@please/lrud'
+import { AppProvider } from './context/appContext'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -37,9 +38,11 @@ root.render(
     // @ts-ignore
     bundleUrlOverride: 'http://localhost:3000/core-react-dom-bundle/index.js',
   }}>
-    <FocusRoot>
-      <RouterProvider router={router} />
-    </FocusRoot>
+    <AppProvider>
+      <FocusRoot>
+        <RouterProvider router={router} />
+      </FocusRoot>
+    </AppProvider>
   </TivioProvider>
 )
 

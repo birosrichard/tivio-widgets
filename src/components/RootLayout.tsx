@@ -7,13 +7,6 @@ interface Props {
 export const RootLayout = ({ children }: Props) => {
   return (
     <div className='flex bg-white'>
-      {/* <div className='w-fit z-50 fixed'>
-        <img
-          className="object-cover object-center h-screen"
-          src="/images/sidebar.png"
-          alt="sidebar"
-        />
-      </div> */}
       <Sidebar />
       <div className='w-full pl-14 bg-background pb-64'>
         {children}

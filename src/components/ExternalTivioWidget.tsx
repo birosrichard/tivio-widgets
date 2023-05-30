@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { FocusNode, useFocusNodeById } from '@please/lrud'
 
-export const ExternalTivioWidget = () => {
+export const ExternalTivioWidget = ({ gridPosition }: any) => {
   const widgetRef = useRef(null)
   const navigate = useNavigate()
   const [loaded, setLoaded] = useState(false)
